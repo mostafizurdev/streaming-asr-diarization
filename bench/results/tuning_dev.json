@@ -1,0 +1,77 @@
+{
+  "note": "Grid search on the dev set (4 conversations, seed 1) with the shipped 0.25 s change-detection hop. A 0.5 s hop was also tried at the chosen thresholds: dev DER (0.25 s collar) 8.0% vs 5.8%, test DER 18.2% vs the 0.25 s result, for only a 0.201 vs ~0.21 real-time factor, so 0.25 s was kept.",
+  "hop_0.5_check": {
+    "speaker_threshold": 0.65,
+    "change_threshold": 0.55,
+    "dev_der_collar_0.25": 0.0804,
+    "test_der_collar_0.25": 0.1821,
+    "test_rtf_single_stream": 0.2006
+  },
+  "grid": [
+    {
+      "speaker_threshold": 0.55,
+      "change_threshold": 0.35,
+      "der_collar_0.25": 0.2401
+    },
+    {
+      "speaker_threshold": 0.55,
+      "change_threshold": 0.45,
+      "der_collar_0.25": 0.1612
+    },
+    {
+      "speaker_threshold": 0.55,
+      "change_threshold": 0.55,
+      "der_collar_0.25": 0.1655
+    },
+    {
+      "speaker_threshold": 0.6,
+      "change_threshold": 0.35,
+      "der_collar_0.25": 0.2401
+    },
+    {
+      "speaker_threshold": 0.6,
+      "change_threshold": 0.45,
+      "der_collar_0.25": 0.0627
+    },
+    {
+      "speaker_threshold": 0.6,
+      "change_threshold": 0.55,
+      "der_collar_0.25": 0.1655
+    },
+    {
+      "speaker_threshold": 0.65,
+      "change_threshold": 0.35,
+      "der_collar_0.25": 0.1888
+    },
+    {
+      "speaker_threshold": 0.65,
+      "change_threshold": 0.45,
+      "der_collar_0.25": 0.0627
+    },
+    {
+      "speaker_threshold": 0.65,
+      "change_threshold": 0.55,
+      "der_collar_0.25": 0.0575
+    },
+    {
+      "speaker_threshold": 0.7,
+      "change_threshold": 0.35,
+      "der_collar_0.25": 0.1888
+    },
+    {
+      "speaker_threshold": 0.7,
+      "change_threshold": 0.45,
+      "der_collar_0.25": 0.0627
+    },
+    {
+      "speaker_threshold": 0.7,
+      "change_threshold": 0.55,
+      "der_collar_0.25": 0.0575
+    }
+  ],
+  "best": {
+    "speaker_threshold": 0.65,
+    "change_threshold": 0.55,
+    "der_collar_0.25": 0.0575
+  }
+}

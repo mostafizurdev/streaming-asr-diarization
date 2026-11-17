@@ -1,0 +1,10 @@
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.venv/
+/models
+bench/data/
+bench/dev/
+*.wav
+!samples/*.wav

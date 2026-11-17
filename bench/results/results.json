@@ -1,0 +1,211 @@
+{
+  "hardware": {
+    "cpu": "Intel(R) Xeon(R) Processor @ 2.10GHz",
+    "logical_cores": 2,
+    "gpu": null
+  },
+  "settings": {
+    "asr_model_dir": "models/sherpa-onnx-streaming-zipformer-en-2023-06-26",
+    "asr_int8": "True",
+    "speaker_model": "models/nemo_en_titanet_small.onnx",
+    "num_threads": "2",
+    "endpoint_silence": "0.8",
+    "max_segment_seconds": "20.0",
+    "speaker_threshold": "0.65",
+    "max_speakers": "8",
+    "min_embed_seconds": "1.0",
+    "detect_speaker_changes": "True",
+    "change_threshold": "0.55",
+    "max_batch": "16",
+    "max_wait_ms": "4.0",
+    "max_message_seconds": "2.0"
+  },
+  "synthetic_conversations": {
+    "conversations": 12,
+    "audio_minutes": 8.29,
+    "wer": 0.0883,
+    "der": 0.2212,
+    "der_collar_0.25": 0.1186,
+    "speaker_count_accuracy": 0.667,
+    "rtf_single_stream": 0.2159,
+    "per_conversation": [
+      {
+        "name": "conv00",
+        "speakers": 3,
+        "found": 3,
+        "der": 0.1511,
+        "der_collar_0.25": 0.0636
+      },
+      {
+        "name": "conv01",
+        "speakers": 3,
+        "found": 4,
+        "der": 0.1271,
+        "der_collar_0.25": 0.0453
+      },
+      {
+        "name": "conv02",
+        "speakers": 2,
+        "found": 2,
+        "der": 0.172,
+        "der_collar_0.25": 0.0473
+      },
+      {
+        "name": "conv03",
+        "speakers": 3,
+        "found": 3,
+        "der": 0.2424,
+        "der_collar_0.25": 0.1519
+      },
+      {
+        "name": "conv04",
+        "speakers": 4,
+        "found": 2,
+        "der": 0.3211,
+        "der_collar_0.25": 0.2162
+      },
+      {
+        "name": "conv05",
+        "speakers": 2,
+        "found": 2,
+        "der": 0.1537,
+        "der_collar_0.25": 0.0548
+      },
+      {
+        "name": "conv06",
+        "speakers": 2,
+        "found": 2,
+        "der": 0.1758,
+        "der_collar_0.25": 0.0652
+      },
+      {
+        "name": "conv07",
+        "speakers": 4,
+        "found": 5,
+        "der": 0.3604,
+        "der_collar_0.25": 0.2457
+      },
+      {
+        "name": "conv08",
+        "speakers": 3,
+        "found": 3,
+        "der": 0.1445,
+        "der_collar_0.25": 0.0416
+      },
+      {
+        "name": "conv09",
+        "speakers": 3,
+        "found": 3,
+        "der": 0.1347,
+        "der_collar_0.25": 0.05
+      },
+      {
+        "name": "conv10",
+        "speakers": 3,
+        "found": 2,
+        "der": 0.4559,
+        "der_collar_0.25": 0.334
+      },
+      {
+        "name": "conv11",
+        "speakers": 3,
+        "found": 3,
+        "der": 0.1821,
+        "der_collar_0.25": 0.0684
+      }
+    ]
+  },
+  "ablation_no_change_detection": {
+    "conversations": 12,
+    "audio_minutes": 8.29,
+    "wer": 0.0883,
+    "der": 0.5532,
+    "der_collar_0.25": 0.4461,
+    "speaker_count_accuracy": 0.25,
+    "rtf_single_stream": 0.1697
+  },
+  "librispeech_samples": {
+    "utterances": 3,
+    "words": 77,
+    "wer": 0.0
+  },
+  "live": [
+    {
+      "concurrent_streams": 1,
+      "partial_latency_ms": {
+        "p50": 42.5,
+        "p95": 70.8,
+        "n": 76
+      },
+      "finalization_delay_ms": {
+        "p50": 1519.7,
+        "p95": 3071.4,
+        "n": 4
+      }
+    },
+    {
+      "concurrent_streams": 2,
+      "partial_latency_ms": {
+        "p50": 50.8,
+        "p95": 99.5,
+        "n": 152
+      },
+      "finalization_delay_ms": {
+        "p50": 1774.3,
+        "p95": 3348.6,
+        "n": 8
+      }
+    },
+    {
+      "concurrent_streams": 4,
+      "partial_latency_ms": {
+        "p50": 61.5,
+        "p95": 158.9,
+        "n": 308
+      },
+      "finalization_delay_ms": {
+        "p50": 2636.8,
+        "p95": 4646.5,
+        "n": 15
+      }
+    },
+    {
+      "concurrent_streams": 6,
+      "partial_latency_ms": {
+        "p50": 392.8,
+        "p95": 724.2,
+        "n": 458
+      },
+      "finalization_delay_ms": {
+        "p50": 4654.7,
+        "p95": 6034.6,
+        "n": 22
+      }
+    },
+    {
+      "concurrent_streams": 8,
+      "partial_latency_ms": {
+        "p50": 963.5,
+        "p95": 3699.9,
+        "n": 612
+      },
+      "finalization_delay_ms": {
+        "p50": 7889.8,
+        "p95": 12256.8,
+        "n": 30
+      }
+    }
+  ],
+  "server_metrics": {
+    "active_sessions": 0,
+    "total_sessions": 21,
+    "audio_seconds": 630.0,
+    "real_time_factor": 0.9238,
+    "chunk_processing_ms": {
+      "p50": 71.66,
+      "p95": 185.11
+    },
+    "decode_batches": 1739,
+    "mean_decode_batch": 3.67
+  }
+}
