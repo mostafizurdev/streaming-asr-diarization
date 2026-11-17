@@ -1,6 +1,6 @@
 # Streaming ASR with Online Speaker Diarization
 
-[![CI](https://github.com/mustafizur118/streaming-asr-diarization/actions/workflows/ci.yml/badge.svg)](https://github.com/mustafizur118/streaming-asr-diarization/actions/workflows/ci.yml)
+[![CI](https://github.com/mostafizurdev/streaming-asr-diarization/actions/workflows/ci.yml/badge.svg)](https://github.com/mostafizurdev/streaming-asr-diarization/actions/workflows/ci.yml)
 
 A real-time speech-to-text service that also says **who** is speaking. Audio streams in over a
 WebSocket; partial transcripts come back while the person is still talking, and each finished
@@ -78,7 +78,7 @@ flowchart LR
 ## Quick start
 
 ```bash
-git clone https://github.com/mustafizur118/streaming-asr-diarization
+git clone https://github.com/mostafizurdev/streaming-asr-diarization
 cd streaming-asr-diarization
 pip install -e ".[client]"
 bash scripts/download_models.sh      # ~340 MB, from the sherpa-onnx GitHub releases
